@@ -19,8 +19,7 @@ function Invoke-SyncroRequestPaginated {
     [CmdletBinding()]
     Param(
         [hashtable]$SyncroRequest,
-        [string]$Property,
-        [int]$PageSize = 25
+        [string]$Property
     )
 
     $i = 1
@@ -28,7 +27,7 @@ function Invoke-SyncroRequestPaginated {
       $SyncroRequest.Params.page = $i
       # $HuduRequest.Params.page_size = $PageSize
       $Response = Invoke-SyncroRequest @SyncroRequest
-      
+
       Write-Verbose ("Got page {0} of {1}" -f $Response.meta.page, $Response.meta.total_pages)
       $i++
       if ($Property) {

@@ -2,7 +2,7 @@ function Invoke-SyncroRequest {
   <#
   .SYNOPSIS
   Main SyncroRMM API function
-  
+
   .DESCRIPTION
   Calls SyncroRMM API with token
 
@@ -27,20 +27,11 @@ function Invoke-SyncroRequest {
 
   [CmdletBinding()]
   param (
-      [Parameter()]
-      [string]$Method = 'GET',
-
-      [Parameter()]
+      [string] $Method = 'GET',
       [ValidateNotNullOrEmpty()]
       [string] $Resource,
-
-      [Parameter()]
       [hashtable] $Params = @{},
-
-      [Parameter()]
       [string] $Body,
-
-      [Parameter()]
       [hashtable] $Form
   )
 

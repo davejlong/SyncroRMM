@@ -9,6 +9,8 @@ function Set-SyncroSubdomain {
   .EXAMPLE
   Set-SyncroSubdomain -Subdomain superman
   #>
+  [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseShouldProcessForStateChangingFunctions', '', Scope = 'Function')]
+
   [CmdletBinding()]
   param (
     [Parameter(Mandatory=$false, ValueFromPipeline=$true)]

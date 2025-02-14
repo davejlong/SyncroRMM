@@ -1,18 +1,18 @@
-function Get-SyncroSettings {
+function Get-SyncroTicketSettings {
   <#
   .SYNOPSIS
-  Gets SyncroRMM account settings
+  Gets SyncroRMM ticket settings
 
   .DESCRIPTION
   Calls SyncroRMM API to retrieve account settings
 
   .EXAMPLE Retrieve all account settings
-  Get-SyncroSettings
+  Get-SyncroTicketSettings
   #>
   [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns", "", Scope = 'Function')]
 
   $SyncroRequest = @{
-    Resource = '/settings'
+    Resource = '/tickets/settings'
     Method = 'GET'
   }
   Invoke-SyncroRequest @SyncroRequest

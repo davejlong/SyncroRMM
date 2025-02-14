@@ -2,7 +2,7 @@ function Set-SyncroAPIKey {
   <#
   .SYNOPSIS
   Set SyncroRMM API Key
-  
+
   .DESCRIPTION
   API keys are required to interact with SyncroRMM
 
@@ -12,6 +12,8 @@ function Set-SyncroAPIKey {
   .EXAMPLE
   Set-SyncroAPIKey -ApiKey foobar1234
   #>
+  [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseShouldProcessForStateChangingFunctions', '', Scope = 'Function')]
+  [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingConvertToSecureStringWithPlainText', '', Scope = 'Function')]
 
   [CmdletBinding()]
   param (

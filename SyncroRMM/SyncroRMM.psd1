@@ -70,15 +70,20 @@ Description = 'This module provides and interface to work with the SyncroRMM API
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport = @(
+    'Get-SyncroAlert',
     'Get-SyncroAPIKey',
     'Get-SyncroAsset',
     'Get-SyncroAssetType',
     'Get-SyncroContact',
     'Get-SyncroCustomer',
+    'Get-SyncroPortalUser',
     'Get-SyncroSettings',
     'Get-SyncroSubdomain',
-    'Get-SyncroAPIKey',
-    'Get-SyncroSubdomain'
+    'Get-SyncroTicket',
+    'Get-SyncroTicketSavedSearch',
+    'Get-SyncroTicketSettings',
+    'Set-SyncroAPIKey',
+    'Set-SyncroSubdomain'
 )
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.

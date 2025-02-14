@@ -9,6 +9,8 @@ function Get-SyncroAssetType {
   .PARAM Id
   Retrieve a specific asset type by ID
   #>
+  [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseOutputTypeCorrectly', '', Scope = 'Function')]
+
   [CmdletBinding()]
   param (
       [ValidateRange(1, [int]::MaxValue)]
