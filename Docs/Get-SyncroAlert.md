@@ -13,8 +13,7 @@ Gets Alerts from Syncro API
 ## SYNTAX
 
 ```
-Get-SyncroAlert [[-Id] <Int32>] [[-Status] <AlertStatus>] [-ProgressAction <ActionPreference>]
- [<CommonParameters>]
+Get-SyncroAlert [[-Id] <Int32>] [[-Status] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,10 +54,9 @@ Accept wildcard characters: False
 Status of alerts to retrieve: Resolved, All, Active
 
 ```yaml
-Type: AlertStatus
+Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Active, Resolved, All
 
 Required: False
 Position: 2

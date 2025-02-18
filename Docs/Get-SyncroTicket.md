@@ -14,7 +14,7 @@ Gets tickets from SyncroRMM
 
 ```
 Get-SyncroTicket [[-Id] <Int32>] [[-CustomerId] <Int32>] [[-ContactId] <Int32>] [[-UserId] <Int32>]
- [[-TicketSearchId] <Int32>] [[-Number] <Int32>] [[-Status] <TicketSatus>] [[-ResolvedAfter] <DateTime>]
+ [[-TicketSearchId] <Int32>] [[-Number] <Int32>] [[-Status] <String>] [[-ResolvedAfter] <DateTime>]
  [[-CreatedAfter] <DateTime>] [[-SinceUpdatedAt] <DateTime>] [[-Query] <String>]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
@@ -126,10 +126,9 @@ Accept wildcard characters: False
 Retrieve tickets based on their status
 
 ```yaml
-Type: TicketSatus
+Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: New, InProgress, Resolved, Invoiced, WaitingForParts, WaitingOnCustomer, Scheduled, CustomerReply, NotClosed
 
 Required: False
 Position: 7

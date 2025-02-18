@@ -20,7 +20,7 @@ jobs:
       - name: Update Metadata
         uses: natescherer/update-powershell-metadata-action@v2
         with:
-          path: .\Output\HuduAPI
+          path: .\Output\SyncroRMM
           version: ${{ github.ref_name }}
       
       - name: Publish PowerShell Module
