@@ -12,14 +12,8 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run PSScriptAnalyzer
-        uses: microsoft/psscriptanalyzer-action@v1.1
+        uses: devblackops/github-action-psscriptanalyzer@v2.4.0
         with:
-          path: .\SyncroRMM
+          rootPath: .\SyncroRMM
           recurse: true
-          settings: PSScriptAnalyzerSettings.psd1
-          output: results.sarif
-
-      - name: Upload SARIF results file
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: results.sarif
+          settingsPath: PSScriptAnalyzerSettings.psd1
