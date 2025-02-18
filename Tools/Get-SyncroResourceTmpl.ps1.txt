@@ -1,0 +1,52 @@
+<#
+Template for Get commands.
+
+Replacements:
+	%Resource%
+	%resource%
+
+#>
+
+function Get-Syncro%Resource% {
+  <#
+  .SYNOPSIS
+  Gets %Resource%s from Syncro API
+
+  .DESCRIPTION
+  Retrieves %resource%s from Syncro API
+
+  .PARAMETER Id
+  ID of %resource% to retrieve
+
+  .EXAMPLE
+  # Retrieve a single %resource% by ID
+  Get-Syncro%Resource% -Id 12345
+
+  .EXAMPLE
+  # Retrieve all %resource%s
+  Get-Syncro%Resource%
+  #>
+  [CmdletBinding()]
+  param (
+    [ValidateRange(1, [Int]::MaxValue)]
+    [Int] $Id
+  )
+  $Resource = "/%resource%s"
+
+  if ($Id) {
+    $SyncroRequest = @{
+      Resource = "$Resource/$Id"
+      Method = 'GET'
+    }
+    Invoke-SyncroRequest @SyncroRequest | Select-Object -ExpandProperty %resource%
+  } else {
+    $Params = @{}
+
+    $SyncroRequest = @{
+      Resource = "$Resource"
+      Method = 'GET'
+      Params = $Params
+    }
+    Invoke-SyncroRequestPaginated -SyncroRequest $SyncroRequest -Property %resource%s
+  }
+}
