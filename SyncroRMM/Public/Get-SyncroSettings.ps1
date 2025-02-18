@@ -11,6 +11,8 @@ function Get-SyncroSettings {
   #>
   [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns", "", Scope = 'Function')]
 
+  Param()
+
   $SyncroRequest = @{
     Resource = '/settings'
     Method = 'GET'

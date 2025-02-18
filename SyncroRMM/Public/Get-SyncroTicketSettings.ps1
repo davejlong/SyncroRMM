@@ -11,6 +11,8 @@ function Get-SyncroTicketSettings {
   #>
   [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns", "", Scope = 'Function')]
 
+  Param()
+
   $SyncroRequest = @{
     Resource = '/tickets/settings'
     Method = 'GET'

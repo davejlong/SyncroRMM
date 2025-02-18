@@ -91,7 +91,7 @@ function Invoke-SyncroRequest {
     $Results = Invoke-RestMethod @RestMethod
   } catch {
     if ("$_".trim() -eq 'Retry later' -or "$_".trim() -eq 'The remote server returned an error: (429) Too Many Requests.') {
-      Write-Information 'SyncroRMM API Rate limited. Waiting 30 Seconds then trying again'
+      Write-Warning 'SyncroRMM API Rate limited. Waiting 30 Seconds then trying again'
       Start-Sleep 30
       $Results = Invoke-SyncroRequest @RestMethod
     } else {
