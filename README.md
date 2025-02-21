@@ -9,3 +9,19 @@ If this module helps you be more productive, consider donating to help me keep w
 # Documentation
 
 Documentation for each command can be found in the [/Docs](https://github.com/davejlong/SyncroRMM/tree/master/Docs) folder.
+
+# Basic Usage
+
+```
+Import-Module SyncroRMM
+
+# Set the subdomain and API key
+Set-SyncroSubdomain -Subdomain applebees
+Set-SyncroApiKey -ApiKey FDSA53421F
+
+# Get the Contoso customer
+$Customer = Get-SyncroCustomer -BusinessName "Contoso"
+
+# Get all assets for Contoso
+Get-SyncroAsset -CustomerId $Customer.Id
+```
