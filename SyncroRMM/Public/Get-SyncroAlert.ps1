@@ -1,4 +1,3 @@
-enum AlertStatus { Active; Resolved; All }
 function Get-SyncroAlert {
   <#
   .SYNOPSIS
@@ -25,7 +24,8 @@ function Get-SyncroAlert {
   param (
     [ValidateRange(1, [Int]::MaxValue)]
     [Int] $Id,
-    [AlertStatus] $Status
+    [ValidateSet("Resolved", "All", "Active")]
+    [String] $Status
   )
 
   if ($Id) {

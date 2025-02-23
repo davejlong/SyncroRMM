@@ -1,15 +1,3 @@
-enum TicketSatus {
-  New#  = "New"
-  InProgress#  = "In Progress"
-  Resolved#  = "Resolved"
-  Invoiced# = "Invoiced"
-  WaitingForParts# = "Waiting for Parts"
-  WaitingOnCustomer# = "Waiting on Customer"
-  Scheduled# = "Scheduled"
-  CustomerReply# = "Customer Reply"
-  NotClosed#  = "Not Closed"
-}
-
 function Get-SyncroTicket {
   <#
   .SYNOPSIS
@@ -70,7 +58,8 @@ function Get-SyncroTicket {
     [Int] $TicketSearchId,
     [ValidateRange(1, [Int]::MaxValue)]
     [Int] $Number,
-    [TicketSatus] $Status,
+    [ValidateSet("New", "In Progress", "Resolved", "Invoiced", "Waiting For Parts", "Waiting on Customer", "Scheduled", "Customer Reply", "Not Closed")]
+    [String] $Status,
     [Alias('resolved_after')]
     [datetime] $ResolvedAfter,
     [Alias('created_after')]
@@ -93,9 +82,7 @@ function Get-SyncroTicket {
     if ($UserId) { $Params.user_id = $UserId }
     if ($TicketSearchId) { $Params.ticket_search_id = $TicketSearchId }
     if ($Number) { $Params.number = $Number }
-    if ($Status) {
-      $Params.status = ($Status -creplace '([A-Z])', ' $1').Trim()
-    }
+    if ($Status) { $Params.status = $Status }
     if ($ResolvedAfter) {
       $Params.resolved_after = Get-Date $ResolvedAfter -Format "yyyy-MM-dd"
     }

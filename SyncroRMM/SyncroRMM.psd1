@@ -27,7 +27,7 @@ Author = 'Dave Long'
 CompanyName = 'Cage Data'
 
 # Copyright statement for this module
-Copyright = '(c) Dave Long. All rights reserved.'
+Copyright = '(c) 2025 Dave Long. All rights reserved.'
 
 # Description of the functionality provided by this module
 Description = 'This module provides and interface to work with the SyncroRMM API'
@@ -129,7 +129,7 @@ PrivateData = @{
         # LicenseUri = ''
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/davejlong/SyncroRMM'
 
         # A URL to an icon representing this module.
         # IconUri = ''
