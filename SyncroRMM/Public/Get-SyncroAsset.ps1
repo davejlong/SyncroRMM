@@ -15,6 +15,9 @@ function Get-SyncroAsset {
   .PARAMETER AssetTypeId
   ID of asset types to retrieve
 
+  .PARAMETER AssetSearchId
+  ID of a saved asset search
+
   .PARAMETER SNMP
   Retrieve assets with SNMP enabled
 
@@ -32,13 +35,18 @@ function Get-SyncroAsset {
   param (
     [ValidateRange(1, [int]::MaxValue)]
     [Int] $Id,
+    [Alias('customer_id')]
     [ValidateRange(1, [int]::MaxValue)]
     [Int] $CustomerId,
+    [Alias('asset_type_id')]
     [ValidateRange(1, [int]::MaxValue)]
     [Int] $AssetTypeId,
+    [Alias('asset_search_id')]
+    [ValidateRange(1, [Int]::MaxValue)]
+    [Int] $AssetSearchId
     [Alias('snmp_enabled')]
     [switch] $SNMP=$false,
-    [String] $Query
+    [String] $Query,
   )
 
   if ($Id) {
@@ -53,6 +61,7 @@ function Get-SyncroAsset {
     if ($AssetTypeId) { $Params.asset_type_id = $AssetTypeId }
     if ($SNMP.IsPresent) { $Params.snmp_enabled = $SNMP.IsPresent }
     if ($Query) { $Params.query = $Query }
+    if ($AssetSearchId) { $Params.asset_search_id = $AssetSearchId }
 
     $SyncroRequest = @{
       Resource = '/customer_assets'
