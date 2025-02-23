@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-SyncroAsset [[-Id] <Int32>] [[-CustomerId] <Int32>] [[-AssetTypeId] <Int32>] [-SNMP] [[-Query] <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SyncroAsset [[-Id] <Int32>] [[-CustomerId] <Int32>] [[-AssetTypeId] <Int32>] [[-AssetSearchId] <Int32>]
+ [-SNMP] [[-Query] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,13 +31,28 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -AssetSearchId
+{{ Fill AssetSearchId Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: asset_search_id
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AssetTypeId
 {{ Fill AssetTypeId Description }}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: asset_type_id
 
 Required: False
 Position: 2
@@ -52,7 +67,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: customer_id
 
 Required: False
 Position: 1
@@ -85,7 +100,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 3
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

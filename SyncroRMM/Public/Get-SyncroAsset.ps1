@@ -43,10 +43,10 @@ function Get-SyncroAsset {
     [Int] $AssetTypeId,
     [Alias('asset_search_id')]
     [ValidateRange(1, [Int]::MaxValue)]
-    [Int] $AssetSearchId
+    [Int] $AssetSearchId,
     [Alias('snmp_enabled')]
     [switch] $SNMP=$false,
-    [String] $Query,
+    [String] $Query
   )
 
   if ($Id) {
