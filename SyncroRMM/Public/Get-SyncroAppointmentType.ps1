@@ -16,6 +16,9 @@ function Get-SyncroAppointmentType {
   .EXAMPLE
   # Retrieve all appointment types
   Get-SyncroAppointmentType
+
+  .NOTES
+  Required permission: Global Admin
   #>
   [CmdletBinding()]
   param (

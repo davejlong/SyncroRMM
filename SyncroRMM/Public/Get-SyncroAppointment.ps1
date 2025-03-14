@@ -16,6 +16,9 @@ function Get-SyncroAppointment {
   .EXAMPLE
   # Retrieve all appointments
   Get-SyncroAppointment
+
+  .NOTES
+  Required permission: Appointments - View All (see-own never restricted)
   #>
   [CmdletBinding()]
   param (
