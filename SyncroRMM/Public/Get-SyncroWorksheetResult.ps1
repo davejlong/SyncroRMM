@@ -13,12 +13,12 @@ function Get-SyncroWorksheetResult {
   ID of worksheet result to retrieve
 
   .EXAMPLE
-  # Retrieve a single worksheet result by ID
   Get-SyncroWorksheetResult -TicketId 98765 -Id 12345
+  # Retrieve a single worksheet result by ID
 
   .EXAMPLE
-  # Retrieve all worksheet results for a ticket
   Get-SyncroWorksheetResult -TicketId 12345
+  # Retrieve all worksheet results for a ticket
   #>
   [CmdletBinding()]
   param (

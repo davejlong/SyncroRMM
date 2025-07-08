@@ -10,12 +10,12 @@ function Get-SyncroPurchaseOrder {
   ID of purchase order to retrieve
 
   .EXAMPLE
-  # Retrieve a single purchase order by ID
   Get-SyncroPurchaseOrder -Id 12345
+  # Retrieve a single purchase order by ID
 
   .EXAMPLE
-  # Retrieve all purchase orders
   Get-SyncroPurchaseOrder
+  # Retrieve all purchase orders
   #>
   [CmdletBinding()]
   param (

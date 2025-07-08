@@ -40,8 +40,8 @@ function Get-SyncroTicket {
   Generic search terms to search for tickets
 
   .EXAMPLE
-  # Get a ticket by it's ID
   Get-SyncroTicket -Id 12345
+  # Get a ticket by it's ID
   #>
 
   [CmdletBinding()]

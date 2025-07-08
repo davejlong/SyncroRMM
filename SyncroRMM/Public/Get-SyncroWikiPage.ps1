@@ -10,12 +10,12 @@ function Get-SyncroWikiPage {
   ID of wiki page to retrieve
 
   .EXAMPLE
-  # Retrieve a single wiki_page by ID
   Get-SyncroWikiPage -Id 12345
+  # Retrieve a single wiki_page by ID
 
   .EXAMPLE
-  # Retrieve all wiki_pages
   Get-SyncroWikiPage
+  # Retrieve all wiki_pages
   #>
   [CmdletBinding()]
   param (

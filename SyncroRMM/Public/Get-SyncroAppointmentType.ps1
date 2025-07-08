@@ -10,12 +10,12 @@ function Get-SyncroAppointmentType {
   ID of appointment type to retrieve
 
   .EXAMPLE
-  # Retrieve a single appointment type by ID
   Get-SyncroAppointmentType -Id 12345
+  # Retrieve a single appointment type by ID
 
   .EXAMPLE
-  # Retrieve all appointment types
   Get-SyncroAppointmentType
+  # Retrieve all appointment types
 
   .NOTES
   Required permission: Global Admin

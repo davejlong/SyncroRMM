@@ -10,12 +10,12 @@ function Get-SyncroProduct {
   ID of product to retrieve
 
   .EXAMPLE
-  # Retrieve a single product by ID
   Get-SyncroProduct -Id 12345
+  # Retrieve a single product by ID
 
   .EXAMPLE
-  # Retrieve all products
   Get-SyncroProduct
+  # Retrieve all products
   #>
   [CmdletBinding()]
   param (

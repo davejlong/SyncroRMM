@@ -10,12 +10,12 @@ function Get-SyncroEstimate {
   ID of estimate to retrieve
 
   .EXAMPLE
-  # Retrieve a single estimate by ID
   Get-SyncroEstimate -Id 12345
+  # Retrieve a single estimate by ID
 
   .EXAMPLE
-  # Retrieve all estimates
   Get-SyncroEstimate
+  # Retrieve all estimates
   #>
   [CmdletBinding()]
   param (

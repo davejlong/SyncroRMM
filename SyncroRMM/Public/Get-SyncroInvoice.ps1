@@ -10,12 +10,12 @@ function Get-SyncroInvoice {
   ID of invoice to retrieve
 
   .EXAMPLE
-  # Retrieve a single invoice by ID
   Get-SyncroInvoice -Id 12345
+  # Retrieve a single invoice by ID
 
   .EXAMPLE
-  # Retrieve all invoices
   Get-SyncroInvoice
+  # Retrieve all invoices
   #>
   [CmdletBinding()]
   param (

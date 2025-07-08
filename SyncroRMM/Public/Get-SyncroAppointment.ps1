@@ -10,12 +10,12 @@ function Get-SyncroAppointment {
   ID of appointment to retrieve
 
   .EXAMPLE
-  # Retrieve a single appointment by ID
   Get-SyncroAppointment -Id 12345
+  # Retrieve a single appointment by ID
 
   .EXAMPLE
-  # Retrieve all appointments
   Get-SyncroAppointment
+  # Retrieve all appointments
 
   .NOTES
   Required permission: Appointments - View All (see-own never restricted)

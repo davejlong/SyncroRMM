@@ -10,12 +10,12 @@ function Get-SyncroVendor {
   ID of vendor to retrieve
 
   .EXAMPLE
-  # Retrieve a single vendor by ID
   Get-SyncroVendor -Id 12345
+  # Retrieve a single vendor by ID
 
   .EXAMPLE
-  # Retrieve all vendors
   Get-SyncroVendor
+  # Retrieve all vendors
   #>
   [CmdletBinding()]
   param (

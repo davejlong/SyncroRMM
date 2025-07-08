@@ -24,11 +24,13 @@ function Get-SyncroAsset {
   .PARAMETER Query
   Search query to lookup assets
 
-  .EXAMPLE Retrieve a single asset by ID
+  .EXAMPLE
   Get-SyncroAsset -Id 12345
+  # Retrieve a single asset by ID
 
-  .EXAMPLE Get all assets for customer with ID 12345
+  .EXAMPLE
   Get-SyncroAsset -CustomerId 12345
+  # Get all assets for customer with ID 12345
   #>
 
   [CmdletBinding()]

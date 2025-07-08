@@ -12,11 +12,13 @@ function Get-SyncroContact {
   .PARAMETER CustomerId
   ID of the customer to request contacts for
 
-  .EXAMPLE Retrieves a single contact by ID
+  .EXAMPLE
   Get-SyncroContact -Id 12345
+  # Retrieves a single contact by ID
 
-  .EXAMPLE Retrieves all contacts for the customer with ID 12345
+  .EXAMPLE
   Get-SyncroContact -CustomerId 12345
+  # Retrieves all contacts for the customer with ID 12345
   #>
 
   [CmdletBinding()]

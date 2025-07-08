@@ -10,12 +10,12 @@ function Get-SyncroLead {
   ID of lead to retrieve
 
   .EXAMPLE
-  # Retrieve a single lead by ID
   Get-SyncroLead -Id 12345
+  # Retrieve a single lead by ID
 
   .EXAMPLE
-  # Retrieve all leads
   Get-SyncroLead
+  # Retrieve all leads
   #>
   [CmdletBinding()]
   param (

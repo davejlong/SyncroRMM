@@ -10,12 +10,12 @@ function Get-SyncroPayment {
   ID of payment to retrieve
 
   .EXAMPLE
-  # Retrieve a single payment by ID
   Get-SyncroPayment -Id 12345
+  # Retrieve a single payment by ID
 
   .EXAMPLE
-  # Retrieve all payments
   Get-SyncroPayment
+  # Retrieve all payments
   #>
   [CmdletBinding()]
   param (

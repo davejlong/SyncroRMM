@@ -13,12 +13,12 @@ function Get-SyncroAlert {
   Status of alerts to retrieve: Resolved, All, Active
 
   .EXAMPLE
-  # Retrieve a single alert based on ID
   Get-SyncroAlert -Id 12345
+  # Retrieve a single alert based on ID
 
   .EXAMPLE
-  # Retrieve all active alerts
   Get-SyncroAlert -Status Active
+  # Retrieve all active alerts
   #>
   [CmdletBinding()]
   param (

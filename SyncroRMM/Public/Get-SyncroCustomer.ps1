@@ -27,11 +27,13 @@ function Get-SyncroCustomer {
   .PARAMETER Query
   Search query to lookup customers
 
-  .EXAMPLE Retrieve a single customer by ID
+  .EXAMPLE
   Get-SyncroCustomer -Id 12345
+  # Retrieve a single customer by ID
 
-  .EXAMPLE Get all customers with Contoso in their business name
+  .EXAMPLE
   Get-SyncroCustomer -BusinessName Contoso
+  # Get all customers with Contoso in their business name
   #>
 
   [CmdletBinding()]

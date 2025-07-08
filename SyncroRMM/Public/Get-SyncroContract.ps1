@@ -10,12 +10,12 @@ function Get-SyncroContract {
   ID of contract to retrieve
 
   .EXAMPLE
-  # Retrieve a single contract by ID
   Get-SyncroContract -Id 12345
+  # Retrieve a single contract by ID
 
   .EXAMPLE
-  # Retrieve all contracts
   Get-SyncroContract
+  # Retrieve all contracts
   #>
   [CmdletBinding()]
   param (

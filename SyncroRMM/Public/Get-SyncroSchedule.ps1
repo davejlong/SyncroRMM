@@ -10,12 +10,12 @@ function Get-SyncroSchedule {
   ID of schedule to retrieve
 
   .EXAMPLE
-  # Retrieve a single schedule by ID
   Get-SyncroSchedule -Id 12345
+  # Retrieve a single schedule by ID
 
   .EXAMPLE
-  # Retrieve all schedules
   Get-SyncroSchedule
+  # Retrieve all schedules
   #>
   [CmdletBinding()]
   param (

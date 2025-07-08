@@ -6,8 +6,9 @@ function Get-SyncroTicketSettings {
   .DESCRIPTION
   Calls SyncroRMM API to retrieve account settings
 
-  .EXAMPLE Retrieve all account settings
+  .EXAMPLE
   Get-SyncroTicketSettings
+  # Retrieve all account settings
   #>
   [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns", "", Scope = 'Function')]
 
